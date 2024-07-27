@@ -1,0 +1,10 @@
+coding_interview:
+  label: coding_interview
+  permalink: /coding_interview
+  description: Coding Interview Problems
+
+system_design:
+  label: system_design
+  permalink: /system_design
+  description: System Design Problems
+
