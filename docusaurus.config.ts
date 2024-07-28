@@ -8,7 +8,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://sourabhmishra.in',
+  url: 'https://code-buff.netlify.app',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -114,19 +114,8 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+
+  plugins: ['@docusaurus/theme-live-codeblock'],
 };
 
-export default {
-	url: 'https://code-buff.netlify.app',
-	baseUrl: '/',
-	plugins: ['@docusaurus/theme-live-codeblock'],
-	themeConfig: {
-	  liveCodeBlock: {
-		/**
-		 * The position of the live playground, above or under the editor
-		 * Possible values: "top" | "bottom"
-		 */
-		playgroundPosition: 'top',
-	  },
-	},
-};
+export default config;
