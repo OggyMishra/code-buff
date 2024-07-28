@@ -117,6 +117,8 @@ const config: Config = {
 };
 
 export default {
+	url: 'https://code-buff.netlify.app',
+	baseUrl: '/',
 	plugins: ['@docusaurus/theme-live-codeblock'],
 	themeConfig: {
 	  liveCodeBlock: {
