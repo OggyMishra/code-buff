@@ -8,3 +8,23 @@ system_design:
   permalink: /system_design
   description: System Design Problems
 
+easy:
+  label: easy
+  permalink: /easy
+  description: Easy Problems
+
+medium:
+  label: medium
+  permalink: /medium
+  description: Medium Problems
+
+hard:
+  label: hard
+  permalink: /hard
+  description: Hard Problems
+
+very_hard:
+  label: very_hard
+  permalink: /very_hard
+  description: Very Hard Problems
+
