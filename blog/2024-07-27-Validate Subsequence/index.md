@@ -1,5 +1,5 @@
 ---
-slug: valudate_sequence
+slug: validate_sequence
 title: Validate Subsequence
 authors: [oggy]
 tags: [coding_interview, easy]
@@ -48,7 +48,6 @@ def isValidSubsequence(array, sequence):
             seq_idx += 1
         ar_idx += 1
     return len(sequence) == seq_idx
-
 ```
 </TabItem>
 </Tabs>
