@@ -1,58 +1,74 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
+import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
-type FeatureItem = {
+type ProfileSectionItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  icon: string;
   description: JSX.Element;
+  link?: string;
 };
 
-const FeatureList: FeatureItem[] = [
+const ProfileSections: ProfileSectionItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'About Me',
+    icon: '👨‍💻',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Full Stack Developer with expertise in modern web technologies. 
+        Passionate about creating efficient solutions and sharing knowledge 
+        through technical writing and open-source contributions.
+      </>
+    ),
+    link: '/about',
+  },
+  {
+    title: 'Technical Skills',
+    icon: '🚀',
+    description: (
+      <>
+        Proficient in React, Node.js, TypeScript, Docker, Kubernetes, and 
+        various databases. Experience with cloud platforms, system design, 
+        and algorithm optimization.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Latest Blogs',
+    icon: '📝',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        I regularly write about software development, algorithms, system design, 
+        and DevOps practices. Check out my latest posts on technical topics 
+        and problem-solving approaches.
       </>
     ),
-  },
-  {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
+    link: '/blog',
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
-  return (
+function ProfileSection({title, icon, description, link}: ProfileSectionItem) {
+  const content = (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <div className={styles.profileIcon}>{icon}</div>
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
+        {link && (
+          <Link
+            className="button button--outline button--primary"
+            to={link}>
+            Learn More
+          </Link>
+        )}
       </div>
     </div>
   );
+
+  return content;
 }
 
 export default function HomepageFeatures(): JSX.Element {
@@ -60,8 +76,8 @@ export default function HomepageFeatures(): JSX.Element {
     <section className={styles.features}>
       <div className="container">
         <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+          {ProfileSections.map((props, idx) => (
+            <ProfileSection key={idx} {...props} />
           ))}
         </div>
       </div>

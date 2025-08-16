@@ -3,8 +3,8 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'code-buff',
-  tagline: 'Tutorials and code resources to become a code buff',
+  title: 'Sourabh Mishra',
+  tagline: 'Full Stack Developer & Tech Enthusiast',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -33,13 +33,7 @@ const config: Config = {
     [
       'classic',
       {
-        docs: {
-          sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        docs: false,
         blog: {
 		  blogSidebarTitle: 'ALL posts',
 		  blogSidebarCount: 'ALL',
@@ -57,51 +51,48 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    // Social card for sharing
+    image: 'img/logo.svg',
     navbar: {
-      title: 'code-buff',
-      logo: {
-        alt: 'code-buff Logo',
-        src: 'img/logo.svg',
-      },
+      title: 'Sourabh Mishra',
       items: [
-
-        {to: '/blog', label: 'blogs', position: 'left'},
+        {to: '/blog', label: 'Blog', position: 'right'},
+        {to: '/about', label: 'About', position: 'right'},
+        {to: '/projects', label: 'Projects', position: 'right'},
+        {to: '/contact', label: 'Contact', position: 'right'},
       ],
     },
     footer: {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Connect',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'GitHub',
+              href: 'https://github.com/OggyMishra',
+            },
+            {
+              label: 'LinkedIn',
+              href: 'https://linkedin.com/in/sourabh-mishra',
+            },
+            {
+              label: 'Email',
+              href: 'mailto:sourabh@example.com',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'Explore',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'About',
+              to: '/about',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'Projects',
+              to: '/projects',
             },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
             {
               label: 'Blog',
               to: '/blog',
@@ -109,7 +100,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} House of Oggy Inc.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Sourabh Mishra. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

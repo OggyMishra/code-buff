@@ -4,27 +4,221 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+/* Minimal color scheme inspired by clean personal sites */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #1a1a1a;
+  --ifm-color-primary-dark: #0d0d0d;
+  --ifm-color-primary-darker: #000000;
+  --ifm-color-primary-darkest: #000000;
+  --ifm-color-primary-light: #333333;
+  --ifm-color-primary-lighter: #4d4d4d;
+  --ifm-color-primary-lightest: #666666;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.05);
+  --ifm-background-color: #ffffff;
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-footer-background-color: #f8f9fa;
+  --ifm-font-family-base: 'Assistant', system-ui, -apple-system, sans-serif;
+  --ifm-heading-font-family: 'Assistant', system-ui, -apple-system, sans-serif;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Dark mode with subtle adjustments */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #ffffff;
+  --ifm-color-primary-dark: #f0f0f0;
+  --ifm-color-primary-darker: #e0e0e0;
+  --ifm-color-primary-darkest: #d0d0d0;
+  --ifm-color-primary-light: #ffffff;
+  --ifm-color-primary-lighter: #ffffff;
+  --ifm-color-primary-lightest: #ffffff;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
 }
+
+/* Clean minimal styling */
+.navbar {
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  box-shadow: none;
+  width: 100% !important;
+  min-width: 100% !important;
+  position: relative !important;
+}
+
+/* Force navbar to always maintain full width */
+html .navbar,
+html body .navbar,
+html body div .navbar {
+  width: 100% !important;
+  min-width: 100% !important;
+}
+
+/* Nuclear navbar container override - force ALL navbar containers */
+* .navbar > .container,
+* .navbar__inner,
+* nav.navbar > .container,
+* nav.navbar .navbar__inner,
+* .navbar .container,
+* [class*="navbar"] .container,
+* [class*="navbar"] .navbar__inner,
+* .navbar-sidebar__inner {
+  max-width: 960px !important;
+  margin: 0 auto !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  flex-grow: 1 !important;
+}
+
+.navbar__title {
+  font-family: 'Lora', Georgia, serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.navbar__inner {
+  max-width: 960px !important;
+  margin: 0 auto !important;
+  padding: 0 1.5rem !important;
+  width: 100% !important;
+}
+
+.navbar .container {
+  max-width: 960px !important;
+  margin: 0 auto !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+/* Force navbar consistency across all page types */
+nav.navbar .navbar__inner,
+.navbar-sidebar .navbar__inner,
+div[class*="navbar"] .navbar__inner {
+  max-width: 960px !important;
+  margin: 0 auto !important;
+  padding: 0 1.5rem !important;
+  width: 100% !important;
+}
+
+
+
+.card {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  box-shadow: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.card:hover {
+  border-color: var(--ifm-color-primary);
+  transform: none;
+  box-shadow: none;
+}
+
+/* Typography improvements */
+.container h1 {
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.container h2 {
+  font-weight: 500;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.container h3 {
+  font-weight: 500;
+  color: var(--ifm-color-emphasis-800);
+}
+
+/* Button styling for minimal look */
+.button--outline {
+  border-color: var(--ifm-color-emphasis-300);
+  color: var(--ifm-color-emphasis-800);
+}
+
+.button--outline:hover {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+  background-color: transparent;
+}
+
+/* Footer minimal styling */
+.footer {
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.footer .container {
+  max-width: 960px !important;
+  margin: 0 auto !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+.footer__copyright {
+  text-align: left !important;
+}
+
+/* Homepage specific styling */
+.homepage-content {
+  max-width: 960px !important;
+  margin: 0 auto !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+  width: 100% !important;
+}
+
+/* Force all content to be properly contained */
+.homepage-content * {
+  box-sizing: border-box;
+}
+
+/* Override any Docusaurus container defaults */
+.main-wrapper {
+  max-width: none !important;
+}
+
+.container {
+  max-width: 960px !important;
+  margin: 0 auto !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+/* Blog page specific styling - override sidebar layout affecting navbar */
+body[class*="blog"] .navbar .container,
+body[class*="blog"] .navbar__inner,
+.theme-blog-list-page .navbar .container,
+.theme-blog-list-page .navbar__inner {
+  max-width: 960px !important;
+  margin: 0 auto !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+  width: 100% !important;
+}
+
+.blog-wrapper {
+  max-width: 960px !important;
+  margin: 0 auto !important;
+  padding: 0 1.5rem !important;
+}
+
+.theme-blog-list-page {
+  max-width: 960px !important;
+  margin: 0 auto !important;
+}
+
+.blog-list__container {
+  max-width: 960px !important;
+  margin: 0 auto !important;
+}
+
+/* Align blog sidebar and content */
+.row {
+  max-width: 960px !important;
+  margin: 0 auto !important;
+}
+
+
