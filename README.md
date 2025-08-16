@@ -1,41 +1,49 @@
-# Website
+# Sourabh Mishra - Personal Website
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+A minimal personal website and technical blog built with [Docusaurus](https://docusaurus.io/). This site showcases my work as a Full Stack Developer, technical writing, and open source projects.
+
+## Features
+
+- **Personal Portfolio**: Clean, minimal design highlighting professional background
+- **Technical Blog**: In-depth articles on software development, algorithms, and DevOps
+- **Project Showcase**: Timeline of recent projects and technical work
+- **Responsive Design**: Optimized for all devices with a 960px centered layout
+
+## Tech Stack
+
+- **Framework**: Docusaurus 3.x
+- **Deployment**: Netlify
+- **Styling**: Custom CSS with Google Fonts (Assistant & Lora)
+- **Content**: Markdown-based blog posts and pages
+
+## Development
 
 ### Installation
 
-```
-$ yarn
+```bash
+npm install
 ```
 
 ### Local Development
 
-```
-$ yarn start
+```bash
+npm start
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+Starts a local development server at `http://localhost:3000`. Most changes are reflected live without restarting.
 
 ### Build
 
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
+```bash
+npm run build
 ```
 
-Not using SSH:
+Generates static content into the `build` directory for production deployment.
 
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
+## Live Site
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Visit the live site at: [https://code-buff.netlify.app](https://code-buff.netlify.app)
+
+## License
+
+MIT License - feel free to use this as inspiration for your own personal site.
